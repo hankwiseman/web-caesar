@@ -41,7 +41,7 @@ form = """
         </label>
         </p>
         <p>
-        <textarea name="text" placeholder="{0}"></textarea>
+        <textarea name="text">{0}</textarea>
         </p>
         <p>
         <input type="submit" value="Submit"/>
