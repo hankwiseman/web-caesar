@@ -5,20 +5,20 @@ app = Flask(__name__)
 
 app.config['DEBUG'] = True      # displays runtime errors in the browser, too
 
-page_header = """
+form = """
 <!DOCTYPE html>
 <html>
     <head>
         <title>Web-Caesar</title>
         <style>
-            form {
+            form {{
                 background-color: #eee;
                 padding: 20px;
                 margin: 0 auto;
                 width: 540px;
                 font: 16px sans-serif;
                 border-radius: 10px;
-            }
+            }}
             textarea {{
                 margin: 10px 0;
                 width: 540px;
@@ -27,11 +27,6 @@ page_header = """
         </style>
     </head>
     <body>
-
-    </body>
-</html>
-"""
-form = """
     <form action="/" method="post">
         <p>
         <label for="rot">
@@ -47,6 +42,8 @@ form = """
         <input type="submit" value="Submit"/>
         </p>
     </form>
+    </body>
+    </html>
 """
 @app.route("/", methods=['POST'])
 def encrypt():
